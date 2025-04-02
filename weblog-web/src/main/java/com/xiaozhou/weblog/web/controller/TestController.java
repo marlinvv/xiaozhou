@@ -1,5 +1,7 @@
 package com.xiaozhou.weblog.web.controller;
 
+import com.xiaozhou.weblog.common.enums.ResponseCodeEnum;
+import com.xiaozhou.weblog.common.exception.BizException;
 import com.xiaozhou.weblog.common.utils.Response;
 import com.xiaozhou.weblog.web.model.User;
 import com.xiaozhou.weblog.common.aspect.ApiOperationLog;
@@ -25,20 +27,11 @@ public class TestController {
     @PostMapping("/test")
     @ApiOperationLog(description = "测试接口")
     public Response test(@RequestBody @Validated User user, BindingResult bindingResult) {
-        // 是否存在校验错误
-        if (bindingResult.hasErrors()) {
-            // 获取校验不通过字段的提示信息
-            String errorMsg = bindingResult.getFieldErrors()
-                    .stream()
-                    .map(FieldError::getDefaultMessage)
-                    .collect(Collectors.joining(", "));
-
-            return Response.fail(errorMsg);
-        }
-
-        // 返参
+        // 主动定义一个运行时异常，分母不能为零
+        int i = 1 / 0;
         return Response.success();
     }
+
 
 }
 

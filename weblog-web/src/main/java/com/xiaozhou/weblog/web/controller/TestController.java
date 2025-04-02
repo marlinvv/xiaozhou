@@ -5,6 +5,8 @@ import com.xiaozhou.weblog.common.exception.BizException;
 import com.xiaozhou.weblog.common.utils.Response;
 import com.xiaozhou.weblog.web.model.User;
 import com.xiaozhou.weblog.common.aspect.ApiOperationLog;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -22,15 +24,15 @@ import java.util.stream.Collectors;
  */
 @RestController
 @Slf4j
+@Api(tags = "首页模块")
 public class TestController {
 
     @PostMapping("/test")
     @ApiOperationLog(description = "测试接口")
+    @ApiOperation(value = "测试接口")
     public Response test(@RequestBody @Validated User user) {
         return Response.success();
     }
-
-
 
 }
 

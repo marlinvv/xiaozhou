@@ -1,0 +1,7 @@
+2025-04-01 18:12:21.509 [main] INFO  com.xiaozhou.weblog.web.WeblogWebApplicationTests - Starting WeblogWebApplicationTests using Java 1.8.0_311 on LAPTOP-2MVAF7HH with PID 23884 (started by EMANON in E:\IDEA_Projects\weblog\weblog-springboot\weblog-web)
+2025-04-01 18:12:21.510 [main] INFO  com.xiaozhou.weblog.web.WeblogWebApplicationTests - The following profiles are active: prod
+2025-04-01 18:12:22.512 [main] INFO  com.xiaozhou.weblog.web.WeblogWebApplicationTests - Started WeblogWebApplicationTests in 1.359 seconds (JVM running for 2.274)
+2025-04-01 18:12:22.689 [main] INFO  com.xiaozhou.weblog.web.WeblogWebApplicationTests - 这是一行Info级别日志
+2025-04-01 18:12:22.689 [main] WARN  com.xiaozhou.weblog.web.WeblogWebApplicationTests - 这是一行warn级别日志
+2025-04-01 18:12:22.722 [main] ERROR com.xiaozhou.weblog.web.WeblogWebApplicationTests - 这是一行error级别日志
+2025-04-01 18:12:22.722 [main] INFO  com.xiaozhou.weblog.web.WeblogWebApplicationTests - 这是一行带有占位符日志，作者：小周
